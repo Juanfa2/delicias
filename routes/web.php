@@ -16,10 +16,16 @@ Route::get('/', function () {
 });
 
 Route::get('productos/show', 'ProductoController@showAll');
-Route::post('productos/categoria' , 'ProductoController@showCategoria');
+Route::post('productos/show', 'CategoriaController@showFilter');
+
+
+
+
+#Route::post('productos/categoria' , 'ProductoController@showCategoria');
 Route::get('productos/add' , 'ProductoController@addProductoForm');
 Route::post('productos/add' , 'ProductoController@addProducto');
-Route::get('productos/categoria/{id}', 'CategoriaController@showCategoria');
+#Route::get('productos/categoria/{id}', 'CategoriaController@showCategoria');
+
 Route::get('productos/edit/{id}' , 'ProductoController@editProductoForm');
 Route::post('productos/edit' , 'ProductoController@editProducto');
 

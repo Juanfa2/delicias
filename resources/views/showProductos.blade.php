@@ -6,7 +6,17 @@
 @foreach($categorias as $categoria)
 @if($categoria["nombre"] != "Sin categoria")
 
-<a href="{{ url("/productos/categoria/$categoria->id") }}" class="btn btn-outline-primary mt-4">{{ $categoria["nombre"] }}</a>
+
+
+<form class="form-signin " action="{{ url('productos/show') }}" method="POST">
+        @csrf
+        <div class="input-group mb-2">
+          <input class="form-control mr-sm-2" type="hidden"  id="categoria" name="categoria" aria-label="Search" value="{{ $categoria->id }}" >
+        </div>
+        <button class="btn btn-outline-primary mt-4" type="submit">{{ $categoria["nombre"] }}</button>
+</form>
+
+
 @endif
 @endforeach
 <a href="{{ url("/productos/show") }}" class="btn btn-outline-primary mt-4">Todo</a>

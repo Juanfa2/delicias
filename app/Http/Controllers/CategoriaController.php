@@ -12,4 +12,11 @@ class CategoriaController extends Controller
     	$categorias = Categoria::all();
     	return view('showProductos', compact('productos' , 'categorias'));
     }
+
+    public function showFilter(Request $request){
+
+    	$productos = Categoria::find($request["categoria"])->productos;
+    	$categorias = Categoria::all();
+    	return view('showProductos', compact('productos' , 'categorias'));
+    }
 }
