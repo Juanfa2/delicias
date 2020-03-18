@@ -11,12 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('inicio');
 });
 
-Route::get('productos/show', 'ProductoController@showAll');
-Route::post('productos/show', 'CategoriaController@showFilter');
+*/
+
+Route::get('/', 'ProductoController@showAll');
+Route::post('/', 'CategoriaController@showFilter');
 
 
 

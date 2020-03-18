@@ -8,7 +8,7 @@
 
 
 
-<form class="form-signin " action="{{ url('productos/show') }}" method="POST">
+<form class="form-signin " action="{{ url('/') }}" method="POST">
         @csrf
         <div class="input-group mb-2">
           <input class="form-control mr-sm-2" type="hidden"  id="categoria" name="categoria" aria-label="Search" value="{{ $categoria->id }}" >
@@ -19,7 +19,7 @@
 
 @endif
 @endforeach
-<a href="{{ url("/productos/show") }}" class="btn btn-outline-primary mt-4">Todo</a>
+<a href="{{ url("/") }}" class="btn btn-outline-primary mt-4">Todo</a>
 
 <div class="row">
 @forelse($productos as $producto )

@@ -48,7 +48,7 @@ class ProductoController extends Controller
 
     	$producto->save();
 
-    	return redirect("productos/show");
+    	return redirect("/");
     }	
 
     public function addProductoForm(){
@@ -94,6 +94,6 @@ class ProductoController extends Controller
 
     	$producto->save();
 
-    	return redirect("productos/show");
+    	return redirect("/");
     }
 }
